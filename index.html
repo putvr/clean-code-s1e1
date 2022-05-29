@@ -18,18 +18,18 @@
       <label class="new-task__label" for="new-task">Add Item</label>
       <div class="new-task__wrapper">
         <input class="new-task__input" id="new-task" type="text">
-        <button class="btn">Add</button>
+        <button class="btn btn--add">Add</button>
       </div>
     </section>
 
     <section>
       <h3 class="section-header">Todo</h3>
-      <ul class="tasks tasks-incomplete">
+      <ul class="tasks tasks-incompleted">
         <li class="task">
           <input class="task__checkbox" type="checkbox">
           <label class="task__text">Pay Bills</label>
           <input class="task__input" type="text">
-          <button class="btn">Edit</button>
+          <button class="btn btn--edit">Edit</button>
           <button class="btn btn--delete">
             <img src="./remove.svg">
           </button>
@@ -38,7 +38,7 @@
           <input class="task__checkbox" type="checkbox">
           <label class="task__text">Go Shopping</label>
           <input class="task__input" type="text" value="Go Shopping">
-          <button class="btn">Save</button>
+          <button class="btn btn--edit">Save</button>
           <button class="btn btn--delete">
             <img src="./remove.svg">
           </button>
@@ -48,12 +48,12 @@
 
     <section>
       <h3 class="section-header">Completed</h3>
-      <ul class="tasks tasks-complete" id="completed-tasks">
+      <ul class="tasks tasks-completed">
         <li class="task">
           <input class="task__checkbox" type="checkbox" checked>
           <label class="task__text">See the Doctor</label>
           <input class="task__input" type="text">
-          <button class="btn">Edit</button>
+          <button class="btn btn--edit">Edit</button>
           <button class="btn btn--delete">
             <img src="./remove.svg">
           </button>
