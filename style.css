@@ -16,7 +16,7 @@
   width: 100%;
 }
 
-.header__inf {
+.header__more {
   font-family: fantasy, cursive;
 }
 
@@ -34,24 +34,23 @@
   margin: 0 auto 0;
 }
 
-.task {
+.task__text {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
 }
-.task-row-wrapper {
+
+.new-task__wrapper {
   display: flex;
 }
+
 .tasks {
   margin: 0;
   padding: 0px;
 }
 
-.task-item {
-  list-style: none;
-}
- /* Controls */
-.input,
+/* Controls */
+input,
 .btn {
   outline: none;
 }
@@ -82,7 +81,7 @@
 
 
 /* Heading */
-.header-3,
+.section-header,
 .new-task__label {
   color: #333;
   font-weight: 700;
@@ -92,7 +91,8 @@
   margin: 0;
   text-transform: uppercase;
 }
-.input[type="text"] {
+
+.task__input {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -104,7 +104,8 @@
   font-family: Lato, sans-serif;
   color: #888;
 }
-.input[type="text"]:focus {
+
+.task__input:focus {
   color: #333;
 }
 
@@ -113,12 +114,13 @@
   display: block;
   margin: 0 0 20px;
 }
-.input#new-task {
+
+.new-task__input {
   width: 318px;
 }
 
 /* Task list */
-.task-item  {
+.task {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -126,47 +128,51 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  list-style: none;
 }
 
-.task-item > * {
+.task > * {
   vertical-align: middle;
 }
 
-.task-item > .input[type="checkbox"] {
+.task__checkbox {
   margin: 0 10px;
 }
 
-.task-item > label {
+/* .task-item > label { */
+.task__text {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-.task-item > .input[type="text"] {
+/* .task-item > .input[type="text"] { */
+.task__input {
   width: 226px;
 }
 
 
 /* Completed */
-.tasks-complete label {
+.tasks-complete .task__text {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-/* ul li .input[type="text"] { */
-.tasks li .input[type="text"]  {
+
+.task__text {
   display: none;
 }
 
 /* ul li.editMode .input[type="text"] { */
-.tasks  li.editMode .input[type="text"] {
+.task--edit .task__input {
   display: inline-block;
   width: 224px;
 }
 
 /* ul li.editMode label { */
-.tasks li.editMode label {
+.task--edit .task__text {
   display: none;
 }
