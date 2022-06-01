@@ -64,13 +64,13 @@
   color: #3a3a3a;
 }
 
-.btn--delete img {
+.btn__img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.btn--delete img:hover {
+.btn__img:hover {
   transform: rotateZ(0);
 }
 
