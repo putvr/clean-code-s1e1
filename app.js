@@ -8,7 +8,7 @@
 // Event handling, user interaction is what starts the code execution.
 
 const taskInput = document.getElementById('new-task');// Add a new task.
-const addButton = document.querySelector('.btn--add');// first button
+const addButton = document.querySelector('.btn-add');// first button
 const incompleteTaskHolder = document.querySelector('.tasks-incompleted');// ul of #incompleteTasks
 const completedTasksHolder = document.querySelector('.tasks-completed');// completed-tasks
 
@@ -41,9 +41,9 @@ const createNewTaskElement = (taskString) => {
   editInput.className = 'task__input';
 
   editButton.innerText = 'Edit'; // innerText encodes special characters, HTML does not.
-  editButton.className = 'btn btn--edit';
+  editButton.className = 'btn btn-edit';
 
-  deleteButton.className = 'btn btn--delete';
+  deleteButton.className = 'btn btn-delete';
   deleteButtonImg.src = './remove.svg';
   deleteButtonImg.alt = 'Delete task';
   deleteButtonImg.className = 'btn__img';
@@ -81,8 +81,8 @@ const editTask = function editTask() {
 
   const editInput = listItem.querySelector('.task__input');
   const label = listItem.querySelector('.task__text');
-  const editBtn = listItem.querySelector('.btn--edit');
-  const containsClass = listItem.classList.contains('task--edit');
+  const editBtn = listItem.querySelector('.btn-edit');
+  const containsClass = listItem.classList.contains('task-edit');
   // If class of the parent is .editmode
   if (containsClass) {
     // switch to .editmode
@@ -95,7 +95,7 @@ const editTask = function editTask() {
   }
 
   // toggle .editmode on the parent.
-  listItem.classList.toggle('task--edit');
+  listItem.classList.toggle('task-edit');
 };
 
 // Delete task.
@@ -138,8 +138,8 @@ const bindTaskEvents = (taskListItem, checkBoxEventHandler) => {
   console.log('bind list item events');
   // select ListItems children
   const checkBox = taskListItem.querySelector('.task__checkbox');
-  const editButton = taskListItem.querySelector('.btn--edit');
-  const deleteButton = taskListItem.querySelector('.btn--delete');
+  const editButton = taskListItem.querySelector('.btn-edit');
+  const deleteButton = taskListItem.querySelector('.btn-delete');
 
   // Bind editTask to edit button.
   editButton.addEventListener('click', editTask);
